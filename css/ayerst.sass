@@ -1,0 +1,1631 @@
+
+$beige: #c39450
+
+*
+  padding: 0
+  margin: 0
+  font-family: 'Oswald', sans-serif
+
+html
+  background: #d5d5d5
+
+header
+  height: 11vmin
+  width: 100%
+  background: url("/images/grey-background.jpg")
+  align-items: center
+
+  .container
+    width: 90%
+    max-width: 1175px
+    height: 100%
+    margin: auto
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+
+    a
+      height: 90%
+      width: auto
+
+      svg
+        height: 100%
+        width: auto
+
+      img
+        height: 100%
+        width: auto
+
+    .header-text
+      height: 100%
+      text-align: right
+      display: flex
+      flex-direction: column
+      justify-content: space-around
+
+      h2
+        color: $beige
+        font-size: 4vmin
+        font-style: italic
+
+      h3
+        font-size: 3.2vmin
+        letter-spacing: 1px
+        color: #222
+
+nav
+  width: 100%
+  height: 7vmin
+  background: #39393b
+  display: flex
+  justify-content: center
+
+  .list-logo
+    display: none
+
+  ul
+    width: 70%
+    height: 100%
+    display: flex
+    flex-direction: row
+    transition: 0.5s
+
+    li
+      width: 16.666666%
+      height: 100%
+      list-style-type: none
+
+      a
+        text-decoration: none
+        width: 100%
+        height: 100%
+        display: flex
+        transition: 0.5s
+        position: relative
+
+        &:hover
+          h4
+            &:after
+              width: 130%
+              left: -15%
+
+        h4
+          color: white
+          margin: auto
+          font-size: 2vmin
+          position: relative
+
+          &:after
+            content: ''
+            color: white
+            background: $beige
+            width: 0
+            height: 0.5vmin
+            position: absolute
+            bottom: -0.7vmin
+            left: 50%
+            transition: 0.3s ease-out
+            display: block
+
+        .active
+          &:after
+            width: 130%
+            left: -15%
+
+.fixed-nav
+  position: fixed
+  top: 0
+  display: flex
+  justify-content: center
+  align-items: center
+  z-index: 3
+
+  li
+    width: 13.333333%
+
+  .list-logo
+    display: block
+    width: 20%
+    height: 80%
+    margin: auto
+
+    img
+      height: 100%
+      width: auto
+      //display: flex
+
+  ul
+    width: 74%
+    left: 1.2%
+    position: relative
+
+body
+  //height: 100%
+  width: 100%
+  background-image: url("/images/black-background.jpg")
+  text-align: center
+
+  .fader
+    height: 82vmin
+    width: 100%
+    background-image: url("/images/jumbo-white-4.jpg")
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center
+    position: absolute
+    top: 18vmin
+    opacity: 1
+    transition: 2.0s
+
+  .faded
+    opacity: 0
+
+  .jumbotron
+    height: 82vmin
+    width: 100%
+    background-image: url("/images/jumbo-white-4.jpg")
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center
+    //background-attachment: fixed
+    //filter: blur(3px)
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    //transition: 0.5s
+    opacity: 0
+
+    h1
+      font-family: 'Oswald'
+      width: 95%
+      color: $beige
+      //margin-left: 70%
+      //margin-top: 10%
+      filter: blur(-3px)
+      font-size: 15vmin
+      text-align: center
+      //letter-spacing: 3px
+      margin-bottom: 2vmin
+      //-webkit-text-stroke: 1px #fff
+      //text-shadow: 1px 1px 0 #39393b, -1px -1px 0 #39393b, 1px -1px 0 #39393b, -1px 1px 0 #39393b, 1px 1px 0 #39393b
+
+    button
+      //width: 8%
+      //height: 8%
+      margin: 2vmin auto 0
+      padding: 1vmin 3vmin
+      background: none
+      border-radius: 4vmin
+      border: 3px solid $beige
+      color: $beige
+      font-size: 3vmin
+      background: #efefef
+      transition: 0.5s
+      box-shadow: 0px 8px 18px 2px rgba(100,100,100,0.8)
+
+      &:hover
+        background: $beige
+        color: #eee
+        //border-color: #eee
+
+      &:focus
+        outline: none
+
+      &:active
+        transform: scale(0.95) translateY(1vh)
+        box-shadow: 0px 2px 12px 2px rgba(100,100,100,1)
+        //transform: translateY(3px)
+
+  .blurred
+    background-image: url("/images/jumbo-white-2-blur.jpg")
+
+  .main
+    width: 100%
+    //margin: 0 auto
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    h1
+      font-style: italic
+      width: 90%
+      max-width: 1175px
+      color: $beige
+      margin: 2vmin auto
+      font-size: 4vmin
+
+    p
+      color: white
+      font-size: 2.7vmin
+      margin-bottom: 3vmin
+      width: 90%
+      max-width: 1195px
+
+    img
+      margin-top: 2vmin
+      width: 80%
+      height: auto
+
+  .showcase
+    display: flex
+    flex-direction: column
+
+    h1
+      color: $beige
+      font-size: 4vmin
+      font-style: italic
+      margin: 3vmin 0
+
+    .home-images
+      margin: 0 auto
+      width: 100%
+      font-size: 0
+      display: flex
+      justify-content: space-around
+
+      a
+        width: 33.333%
+        height: 33vw
+        position: relative
+        display: flex
+        overflow: hidden
+
+        img
+          height: 100%
+          width: 100%
+          transition: 0.5s
+          font-size: 50px
+
+        .rollover
+          height: 110%
+          width: 176%
+          background: rgba(0,0,0,0.5)
+          position: absolute
+          top: -100%
+          left: -38%
+          transition: 1.0s
+          border-radius: 0 0 50% 50%
+
+          svg
+            width: 8%
+            height: auto
+            position: absolute
+            bottom: -2%
+            left: 46%
+
+        h4
+          font-size: 4vw
+          position: absolute
+          top: 0
+          color: #ddd
+          top: 45%
+          left: 50%
+          transform: translateY(-50%) translateX(-50%)
+          opacity: 0.0
+          transition: 1.5s
+          //background: rgba(0,0,0,0.5)
+          padding: 0vw 2vw
+          -webkit-transform-style: preserve-3d
+          -webkit-backface-visibility: hidden
+
+        &:hover
+          h4
+            opacity: 1.0
+
+          .rollover
+            top: 0
+            background: rgba(0,0,0,0.7)
+
+  .brands
+    height: 20vmin
+    width: 100%
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    background: url("/images/grey-background.jpg")
+
+    h1
+      color: #555
+      font-style: italic
+      font-size: 3vmin
+      width: 90%
+
+    .brand-list
+      height: 6vw
+      width: 80%
+      max-width: 1200px
+      display: flex
+      justify-content: space-between
+      align-items: center
+
+      a
+        width: 14vw
+        height: 5.21vw
+        -webkit-backface-visibility: hidden
+        transition: 0.5s
+
+        &:hover
+          filter: brightness(60%)
+
+        img
+          width: 100%
+          height: 100%
+
+      a:nth-child(2)
+        width: 15vw
+        height: 4.13vw
+
+      a:nth-child(3)
+        width: 12vw
+        height: 4.91vw
+
+      a:nth-child(4)
+        width: 16vw
+        height: 2.48vw
+
+  .contact
+    width: 100%
+    //max-width: 1175px
+    margin: 0 auto
+    display: flex
+    flex-direction: column
+    align-items: center
+    background: url("/images/grey-background.jpg")
+
+    h1
+      font-style: italic
+      color: $beige
+      margin: 2vmin auto
+      font-size: 4vmin
+
+    p
+      color: #39393b
+      font-size: 2.7vmin
+      margin-bottom: 3vmin
+      width: 90%
+      max-width: 1057.5px
+
+  .van
+    height: 59vmin
+    width: 100%
+    background: url("/images/ayerst-truck.jpg")
+    background-position: center
+    background-size: cover
+
+footer
+  height: 10vmin
+  width: 100%
+  max-width: 1200px
+  margin: 0 auto
+  display: flex
+  justify-content: space-between
+  align-items: center
+  color: #dadada
+  position: relative
+
+  .aw-link
+    width: 30vmin
+    text-align: center
+    font-size: 2vmin
+    color: $beige
+
+    a
+      color: rgba(255,255,255,0.7)
+      text-decoration: none
+      transition: 0.5s
+      background: url("/images/aw-logo-circle-transparent.png") no-repeat right
+      background-size: contain
+      padding: 0 3.8vmin 0.3vmin 0
+      line-height: 4vmin
+
+      &:hover
+        filter: brightness(60%)
+
+  ul
+    display: flex
+    list-style-type: none
+    align-items: center
+    width: 16vmin
+    justify-content: space-between
+
+    a
+      font-size: 0
+      display: flex
+      justify-content: flex-end
+
+      svg
+        height: 3.6vmin
+        width: auto
+
+        path
+          transition: 0.5s
+
+    li:first-child
+      svg
+        height: 3.3vmin
+        width: auto
+
+      &:hover
+        path
+          fill: #3c5a99
+
+    li:nth-child(2)
+      &:hover
+        path
+          fill: #fff101
+
+    li:nth-child(3)
+      &:hover
+        path
+          fill: #0077b5
+
+  .footer-links
+    width: 30vmin
+    height: 3vmin
+    font-size: 4vmin
+
+    li
+      height: 100%
+      width: 33.333%
+      font-size: 0
+      display: flex
+
+      img
+        width: 100%
+        height: auto
+        margin: 0.67vmin auto auto
+
+      h4
+        color: $beige
+        text-align: center
+        font-size: 2vmin
+
+      a
+        height: 100%
+        width: 100%
+        font-size: 2vmin
+        text-decoration: none
+        text-align: center
+        display: flex
+
+        &:hover
+          h4
+            color: darken($beige, 20%)
+
+            &:after
+              width: 130%
+              left: -15%
+
+        h4
+          color: $beige
+          text-align: center
+          transition: 0.5s
+          margin: 0 auto
+          position: relative
+
+          &:after
+            content: ''
+            color: white
+            background: $beige
+            width: 0
+            height: 0.5vmin
+            position: absolute
+            bottom: -0.7vmin
+            left: 50%
+            transition: 0.3s ease-out
+            display: block
+
+
+section
+  background: pink
+  font-size: 20vmin
+
+#about
+
+  .jumbotron
+    background-image: url("/images/jumbo-white-5.jpg")
+    background-position: center top
+
+    h1
+      font-size: 12vmin
+      letter-spacing: 0.2vmin
+
+  .mobile-service
+    width: 100%
+    height: 65vmin
+    background: url("/images/ayerst-truck-2.jpg")
+    background-position: center 25%
+    background-size: cover
+
+  .grey
+    background-image: url("/images/grey-background.jpg")
+
+    h3
+      font-size: 3.2vmin
+      letter-spacing: 1px
+      color: #39393b
+      margin: -1vmin 0 3vmin
+
+    p
+      color: #39393b
+
+  .about-home-office
+    height: 60vmin
+    width: 100%
+
+    h1
+      //color: #4995AD
+      //color: #98785F
+      color: $beige
+      position: relative
+      top: 49.5%
+      transform: translateY(-50%)
+      font-size: 12vmin
+      text-shadow: 1px 1px 0 #39393b, -1px -1px 0 #39393b, 1px -1px 0 #39393b, -1px 1px 0 #39393b
+
+    .about-home
+      width: 50%
+      height: 100%
+      background-image: url("/images/about-home.jpg")
+      display: inline-block
+      float: left
+      background-position: 20% center
+      background-size: cover
+      background-attachment: scroll
+
+    .or-circle
+      color: #39393b
+      width: 12vmin
+      height: 12vmin
+      position: absolute
+      //background: #4995AD
+      background: $beige
+      left: 50%
+      transform: translateX(-50%)
+      margin: 24vmin 0 0 0
+      border-radius: 5vw
+      border: 1px solid #39393b
+      box-sizing: border-box
+
+      h2
+        font-size: 4vmin
+        position: relative
+        top: 50%
+        transform: translateY(-50%)
+
+    .about-office
+      width: 50%
+      height: 100%
+      background-image: url("/images/about-office.jpg")
+      display: inline-block
+      background-size: cover
+      background-position: center
+
+  .brand-demos
+    //font-size: 0
+    width: 100%
+    height: 25vw
+    display: flex
+    position: relative
+    overflow: hidden
+
+    .brand-demo-logos
+      width: 100%
+      height: 100%
+      position: absolute
+      pointer-events: none
+      z-index: 3
+
+      .logo
+        height: 25%
+        bottom: 0
+
+      .maxxmar-logo
+        position: absolute
+        left: 0
+
+      .hunter-logo
+        position: absolute
+        left: 25%
+
+      .elite-logo
+        position: absolute
+        left: 50%
+
+      .shade-logo
+        position: absolute
+        left: 75%
+
+
+    .brand-container
+      width: 25%
+      height: 100%
+      position: relative
+      overflow: hidden
+
+      .brand
+        width: 100%
+        height: 100%
+        background-position: center
+        background-size: cover
+        transition: transform 10s
+
+        &:hover
+          transform: scale(1.2)
+          z-index: 1
+          //background-size: 110% 110%
+
+        img
+          position: absolute
+          height: 25%
+          width: auto
+          left: 0
+          bottom: 0
+
+      .maxxmar
+        background-image: url("/images/demo-maxxmar-square.jpg")
+
+      .hunter
+        background-image: url("/images/demo-hunter-square.jpg")
+
+      .elite
+        background-image: url("/images/demo-elite-square.jpg")
+
+      .shade
+        background-image: url("/images/demo-shade-square.jpg")
+
+#blinds
+  .jumbotron
+    background-image: url("/images/jumbo-blinds.jpg")
+    //background-attachment: fixed
+
+    h1
+      color: $beige
+      font-size: 15vmin
+      width: 100%
+      max-width: 1200px
+      letter-spacing: 0.2vmin
+      //text-shadow: 2px 2px 0 #39393b, -2px -2px 0 #39393b, 2px -2px 0 #39393b, -2px 2px 0 #39393b, 2px 2px 0 #39393b
+
+  .showcase-area
+    background: url("/images/grey-background.jpg")
+    display: flex
+    flex-direction: column
+    //justify-content: space-around
+
+    .view-selector
+      width: 10vw
+      height: 4vw
+      //background: purple
+      margin: 2vw auto 0
+      display: flex
+      border-radius: 2vw
+      box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.7)
+      //overflow: hidden
+
+      .grid-view
+        width: 50%
+        height: 100%
+        background: #bbb
+        //background: #a4a4a4
+        border: 0.2vw solid #ccc
+        border-right: 0.15vw solid #ccc
+        border-radius: 2vw 0 0 2vw
+        transition: 0.5s
+        box-sizing: border-box
+        box-shadow: inset 0px 0px 2px 0px rgba(0,0,0,0.7)
+
+
+        svg
+          float: right
+          height: 100%
+          width: auto
+          transition: 0.5s
+
+        &:hover
+          path
+            fill: rgba(0,116,217,0.6)
+
+      .slide-view
+        width: 50%
+        height: 100%
+        background: #bbb
+        border: 0.2vw solid #ccc
+        border-left: 0.15vw solid #ccc
+        border-radius: 0 2vw 2vw 0
+        transition: 0.5s
+        box-sizing: border-box
+        box-shadow: inset 0px 0px 2px 0px rgba(0,0,0,0.7)
+
+        svg
+          float: left
+          height: 100%
+          width: auto
+          margin-left: 0.3vw
+          transition: 0.5s
+
+        &:hover
+          path
+            fill: rgba(0,116,217,0.6)
+
+      .active
+        background: $beige
+        box-shadow: inset 0px 0px 8px 0px rgba(0,0,0,0.7)
+
+        svg
+          transform: scale(0.92)
+
+          path
+            fill: #0074d9
+
+        &:hover
+          path
+            fill: #0074d9
+
+      // .active
+      //   background: #a4a4a4
+      //   path
+      //     fill: #0074d9
+      //
+      //   &:hover
+      //     path
+      //       fill: #0074d9
+
+    .blind-showcase
+      //background: $beige
+      //padding: 1vw 0
+      width: 100%
+      height: 115.46vw
+      overflow: hidden
+
+      .grid
+        width: 100%
+        height: 112.46vw
+        display: flex
+        //position: absolute
+        //display: none
+        flex-direction: row
+        justify-content: space-between
+        margin: 2vw 0
+        position: absolute
+        //opacity: 1
+        //transition: 1.0s
+
+        .close-ups
+          display: flex
+          flex-direction: column
+          //width: 30.69%
+          width: 30.2%
+          height: 100%
+          justify-content: space-between
+
+          .image
+            width: 100%
+            height: 24.41%
+            background-repeat: no-repeat
+            background-size: cover
+            background-position: center
+
+          .image:first-child
+            background-image: url("/images/show-blinds-1.jpg")
+            background-position: left center
+
+          .image:nth-child(2)
+            background-image: url("/images/show-blinds-2.jpg")
+            background-position: left center
+
+          .image:nth-child(3)
+            background-image: url("/images/show-blinds-3.jpg")
+            background-position: left center
+
+          .image:nth-child(4)
+            background-image: url("/images/show-blinds-4.jpg")
+            background-position: left center
+
+        .room-pics
+          display: flex
+          flex-direction: column
+          width: 68.9vw
+          height: 100%
+          justify-content: space-between
+
+          .large-room
+            width: 100%
+            height: 41.99vw
+            background-repeat: no-repeat
+            background-size: cover
+            background-position: center
+            background-image: url("/images/show-blinds-5.jpg")
+
+          .row-2
+            width: 100%
+            height: 31.9vw
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+
+            div:first-child
+              width: 35.67%
+              height: 100%
+              background-repeat: no-repeat
+              background-size: cover
+              background-position: center
+              background-image: url("/images/show-blinds-6.jpg")
+
+            div:last-child
+              width: 63.02%
+              height: 100%
+              background-repeat: no-repeat
+              background-size: cover
+              background-position: center
+              background-image: url("/images/show-blinds-7.jpg")
+
+          .row-3
+            width: 100%
+            height: 36.8vw
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+
+            div:first-child
+              width: 62.58%
+              height: 100%
+              background-repeat: no-repeat
+              background-size: cover
+              background-position: center
+              background-image: url("/images/show-blinds-8.jpg")
+
+            div:last-child
+              width: 36.11%
+              height: 100%
+              background-repeat: no-repeat
+              background-size: cover
+              background-position: center
+              background-image: url("/images/show-blinds-9.jpg")
+
+      .slides
+        width: 100%
+        height: 60vw
+        margin: 1vw auto 2vw
+        max-height: 75vh
+        position: relative
+        //display: none
+        //transition: 1.0s
+        //overflow: hidden
+
+        .left-scroll
+          width: 20%
+          height: 100%
+          //background: rgba(0,0,0,0.7)
+          background: linear-gradient(to right, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0) 100%)
+          position: absolute
+          z-index: 3
+          transition: 0.5s
+          cursor: pointer
+
+          svg
+            transform: rotate(90deg)
+            height: 20vw
+            margin: 10vw auto
+            transition: 0.5s
+
+          &:hover
+            background: linear-gradient(to right, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.1) 90%, rgba(0,0,0,0) 100%)
+
+            svg
+              transform: rotate(90deg) scale(1.3)
+              fill: rgba(255,255,255,0.9)
+
+        .right-scroll
+          width: 20%
+          height: 100%
+          //background: rgba(0,0,0,0.7)
+          background: linear-gradient(to left, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0) 100%)
+          position: absolute
+          right: 0
+          z-index: 3
+          transition: 0.5s
+          cursor: pointer
+
+          svg
+            transform: rotate(-90deg)
+            height: 20vw
+            margin: 10vw auto
+            transition: 0.5s
+
+          &:hover
+            background: linear-gradient(to left, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.1) 90%, rgba(0,0,0,0) 100%)
+
+            svg
+              transform: rotate(-90deg) scale(1.3)
+              fill: rgba(255,255,255,0.9)
+
+        .small-slide
+          width: 18%
+          height: 80%
+          //background: pink
+          position: absolute
+          top: 10%
+          display: flex
+          transition: 2s
+          opacity: 1.0
+          z-index: 1
+          //filter: blur(2px)
+
+          img
+            max-width: 100%
+            max-height: 100%
+            margin: auto
+
+        .off-left
+          left: -20%
+          opacity: 0.0
+          z-index: -1
+
+        .off-right
+          left: 100%
+          right: -20%
+          opacity: 0.0
+          z-index: -1
+
+        .small-left
+          left: 0%
+          right: 82%
+
+        .small-right
+          right: 0%
+          left: 82%
+
+        .main-slide
+          width: 70%
+          height: 100%
+          //background: rgba(0,200,0,0.6)
+          position: absolute
+          top: 0%
+          left: 15%
+          right: 15%
+          z-index: 2
+          display: flex
+          transition: 2s
+          //box-shadow: 6vw 0 10vw -4px rgba(0,0,0,0.6), -6vw 0 10vw -4px rgba(0,0,0,0.6)
+
+          img
+            max-width: 100%
+            max-height: 90%
+            margin: auto
+
+#shades
+  .jumbotron
+    background-image: url("/images/jumbo-shades.jpg")
+    //background-attachment: fixed
+
+    h1
+      color: $beige
+      font-size: 15vmin
+      width: 100%
+      max-width: 1200px
+      letter-spacing: 0.2vmin
+      //text-shadow: 2px 2px 0 #39393b, -2px -2px 0 #39393b, 2px -2px 0 #39393b, -2px 2px 0 #39393b, 2px 2px 0 #39393b
+
+  .showcase-area
+    background: url("/images/grey-background.jpg")
+    display: flex
+    flex-direction: column
+    //justify-content: space-around
+
+    .view-selector
+      width: 10vw
+      height: 4vw
+      //background: purple
+      margin: 2vw auto 0
+      display: flex
+      border-radius: 2vw
+      box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.7)
+      //overflow: hidden
+
+      .grid-view
+        width: 50%
+        height: 100%
+        background: #bbb
+        //background: #a4a4a4
+        border: 0.2vw solid #ccc
+        border-right: 0.15vw solid #ccc
+        border-radius: 2vw 0 0 2vw
+        transition: 0.5s
+        box-sizing: border-box
+        box-shadow: inset 0px 0px 2px 0px rgba(0,0,0,0.7)
+
+
+        svg
+          float: right
+          height: 100%
+          width: auto
+          transition: 0.5s
+
+        &:hover
+          path
+            fill: rgba(0,116,217,0.6)
+
+      .slide-view
+        width: 50%
+        height: 100%
+        background: #bbb
+        border: 0.2vw solid #ccc
+        border-left: 0.15vw solid #ccc
+        border-radius: 0 2vw 2vw 0
+        transition: 0.5s
+        box-sizing: border-box
+        box-shadow: inset 0px 0px 2px 0px rgba(0,0,0,0.7)
+
+        svg
+          float: left
+          height: 100%
+          width: auto
+          margin-left: 0.3vw
+          transition: 0.5s
+
+        &:hover
+          path
+            fill: rgba(0,116,217,0.6)
+
+      .active
+        background: $beige
+        box-shadow: inset 0px 0px 8px 0px rgba(0,0,0,0.7)
+
+        svg
+          transform: scale(0.92)
+
+          path
+            fill: #0074d9
+
+        &:hover
+          path
+            fill: #0074d9
+
+      // .active
+      //   background: #a4a4a4
+      //   path
+      //     fill: #0074d9
+      //
+      //   &:hover
+      //     path
+      //       fill: #0074d9
+
+    .blind-showcase
+      //background: $beige
+      //padding: 1vw 0
+      width: 100%
+      height: 115.46vw
+      overflow: hidden
+
+      .grid
+        width: 100%
+        height: 112.46vw
+        display: flex
+        //position: absolute
+        //display: none
+        flex-direction: row-reverse
+        justify-content: space-between
+        margin: 2vw 0
+        position: absolute
+        //opacity: 1
+        //transition: 1.0s
+
+        .close-ups
+          display: flex
+          flex-direction: column
+          width: 30.2%
+          height: 100%
+          justify-content: space-between
+
+          .image
+            width: 100%
+            height: 24.41%
+            background-repeat: no-repeat
+            background-size: cover
+            background-position: center
+
+          .image:first-child
+            background-image: url("/images/show-shades-1.jpg")
+            background-position: left center
+
+          .image:nth-child(2)
+            background-image: url("/images/show-shades-2.jpg")
+
+          .image:nth-child(3)
+            background-position: left center
+            background-image: url("/images/show-shades-3.jpg")
+
+          .image:nth-child(4)
+            background-image: url("/images/show-shades-4.jpg")
+            background-position: left center
+
+        .room-pics
+          display: flex
+          flex-direction: column
+          width: 68.9vw
+          height: 100%
+          justify-content: space-between
+
+          .large-room
+            width: 100%
+            height: 41.99vw
+            background-repeat: no-repeat
+            background-size: cover
+            background-position: center
+            background-image: url("/images/show-shades-5.jpg")
+
+          .row-2
+            width: 100%
+            height: 31.9vw
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+
+            div:first-child
+              width: 35.67%
+              height: 100%
+              background-repeat: no-repeat
+              background-size: cover
+              background-position: center
+              background-image: url("/images/show-shades-6.jpg")
+
+            div:last-child
+              width: 63.02%
+              height: 100%
+              background-repeat: no-repeat
+              background-size: cover
+              background-position: center
+              background-image: url("/images/show-shades-7.jpg")
+
+          .row-3
+            width: 100%
+            height: 36.8vw
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+
+            div:first-child
+              width: 62.58%
+              height: 100%
+              background-repeat: no-repeat
+              background-size: cover
+              background-position: center
+              background-image: url("/images/show-shades-8.jpg")
+
+            div:last-child
+              width: 36.11%
+              height: 100%
+              background-repeat: no-repeat
+              background-size: cover
+              background-position: center
+              background-image: url("/images/show-shades-9.jpg")
+
+      .slides
+        width: 100%
+        height: 60vw
+        margin: 1vw auto 2vw
+        max-height: 75vh
+        position: relative
+        //display: none
+        //transition: 1.0s
+        //overflow: hidden
+
+        .left-scroll
+          width: 20%
+          height: 100%
+          //background: rgba(0,0,0,0.7)
+          background: linear-gradient(to right, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0) 100%)
+          position: absolute
+          z-index: 3
+          transition: 0.5s
+          cursor: pointer
+
+          svg
+            transform: rotate(90deg)
+            height: 20vw
+            margin: 10vw auto
+            transition: 0.5s
+
+          &:hover
+            background: linear-gradient(to right, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.1) 90%, rgba(0,0,0,0) 100%)
+
+            svg
+              transform: rotate(90deg) scale(1.3)
+              fill: rgba(255,255,255,0.9)
+
+        .right-scroll
+          width: 20%
+          height: 100%
+          //background: rgba(0,0,0,0.7)
+          background: linear-gradient(to left, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0) 100%)
+          position: absolute
+          right: 0
+          z-index: 3
+          transition: 0.5s
+          cursor: pointer
+
+          svg
+            transform: rotate(-90deg)
+            height: 20vw
+            margin: 10vw auto
+            transition: 0.5s
+
+          &:hover
+            background: linear-gradient(to left, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.1) 90%, rgba(0,0,0,0) 100%)
+
+            svg
+              transform: rotate(-90deg) scale(1.3)
+              fill: rgba(255,255,255,0.9)
+
+        .small-slide
+          width: 18%
+          height: 80%
+          //background: pink
+          position: absolute
+          top: 10%
+          display: flex
+          transition: 2s
+          opacity: 1.0
+          z-index: 1
+          //filter: blur(2px)
+
+          img
+            max-width: 100%
+            max-height: 100%
+            margin: auto
+
+        .off-left
+          left: -20%
+          opacity: 0.0
+          z-index: -1
+
+        .off-right
+          left: 100%
+          right: -20%
+          opacity: 0.0
+          z-index: -1
+
+        .small-left
+          left: 0%
+          right: 82%
+
+        .small-right
+          right: 0%
+          left: 82%
+
+        .main-slide
+          width: 70%
+          height: 100%
+          //background: rgba(0,200,0,0.6)
+          position: absolute
+          top: 0%
+          left: 15%
+          right: 15%
+          z-index: 2
+          display: flex
+          transition: 2s
+          //box-shadow: 6vw 0 10vw -4px rgba(0,0,0,0.6), -6vw 0 10vw -4px rgba(0,0,0,0.6)
+
+          img
+            max-width: 100%
+            max-height: 90%
+            margin: auto
+
+#shutters
+  .jumbotron
+    background-image: url("/images/jumbo-shutters.jpg")
+    //background-attachment: fixed
+
+    h1
+      color: $beige
+      font-size: 15vmin
+      width: 100%
+      max-width: 1200px
+      letter-spacing: 0.2vmin
+      //text-shadow: 2px 2px 0 #39393b, -2px -2px 0 #39393b, 2px -2px 0 #39393b, -2px 2px 0 #39393b, 2px 2px 0 #39393b
+
+  .showcase-area
+    background: url("/images/grey-background.jpg")
+    display: flex
+    flex-direction: column
+    //justify-content: space-around
+
+    .view-selector
+      width: 10vw
+      height: 4vw
+      //background: purple
+      margin: 2vw auto 0
+      display: flex
+      border-radius: 2vw
+      box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.7)
+      //overflow: hidden
+
+      .grid-view
+        width: 50%
+        height: 100%
+        background: #bbb
+        //background: #a4a4a4
+        border: 0.2vw solid #ccc
+        border-right: 0.15vw solid #ccc
+        border-radius: 2vw 0 0 2vw
+        transition: 0.5s
+        box-sizing: border-box
+        box-shadow: inset 0px 0px 2px 0px rgba(0,0,0,0.7)
+
+
+        svg
+          float: right
+          height: 100%
+          width: auto
+          transition: 0.5s
+
+        &:hover
+          path
+            fill: rgba(0,116,217,0.6)
+
+      .slide-view
+        width: 50%
+        height: 100%
+        background: #bbb
+        border: 0.2vw solid #ccc
+        border-left: 0.15vw solid #ccc
+        border-radius: 0 2vw 2vw 0
+        transition: 0.5s
+        box-sizing: border-box
+        box-shadow: inset 0px 0px 2px 0px rgba(0,0,0,0.7)
+
+        svg
+          float: left
+          height: 100%
+          width: auto
+          margin-left: 0.3vw
+          transition: 0.5s
+
+        &:hover
+          path
+            fill: rgba(0,116,217,0.6)
+
+      .active
+        background: $beige
+        box-shadow: inset 0px 0px 8px 0px rgba(0,0,0,0.7)
+
+        svg
+          transform: scale(0.92)
+
+          path
+            fill: #0074d9
+
+        &:hover
+          path
+            fill: #0074d9
+
+      // .active
+      //   background: #a4a4a4
+      //   path
+      //     fill: #0074d9
+      //
+      //   &:hover
+      //     path
+      //       fill: #0074d9
+
+    .blind-showcase
+      //background: $beige
+      //padding: 1vw 0
+      width: 100%
+      height: 115.46vw
+      overflow: hidden
+
+      .grid
+        width: 100%
+        height: 112.46vw
+        display: flex
+        //position: absolute
+        //display: none
+        flex-direction: row
+        justify-content: space-between
+        margin: 2vw 0
+        position: absolute
+        //opacity: 1
+        //transition: 1.0s
+
+        .close-ups
+          display: flex
+          flex-direction: column
+          width: 30.2%
+          height: 100%
+          justify-content: space-between
+
+          .image
+            width: 100%
+            height: 24.41%
+            background-repeat: no-repeat
+            background-size: cover
+            background-position: left center
+
+          .image:first-child
+            background-image: url("/images/show-shutters-1.jpg")
+
+          .image:nth-child(2)
+            background-image: url("/images/show-shutters-2.jpg")
+
+          .image:nth-child(3)
+            background-image: url("/images/show-shutters-3.jpg")
+
+          .image:nth-child(4)
+            background-image: url("/images/show-shutters-4.jpg")
+
+        .room-pics
+          display: flex
+          flex-direction: column
+          width: 68.9vw
+          height: 100%
+          justify-content: space-between
+
+          .large-room
+            width: 100%
+            height: 41.99vw
+            background-repeat: no-repeat
+            background-size: cover
+            background-position: center
+            background-image: url("/images/show-shutters-5.jpg")
+
+          .row-2
+            width: 100%
+            height: 31.9vw
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+
+            div:first-child
+              width: 35.67%
+              height: 100%
+              background-repeat: no-repeat
+              background-size: cover
+              background-position: center
+              background-image: url("/images/show-shutters-6.jpg")
+
+            div:last-child
+              width: 63.02%
+              height: 100%
+              background-repeat: no-repeat
+              background-size: cover
+              background-position: center
+              background-image: url("/images/show-shutters-7.jpg")
+
+          .row-3
+            width: 100%
+            height: 36.8vw
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+
+            div:first-child
+              width: 62.58%
+              height: 100%
+              background-repeat: no-repeat
+              background-size: cover
+              background-position: left center
+              background-image: url("/images/show-shutters-8.jpg")
+
+            div:last-child
+              width: 36.11%
+              height: 100%
+              background-repeat: no-repeat
+              background-size: cover
+              background-position: center
+              background-image: url("/images/show-shutters-9.jpg")
+
+      .slides
+        width: 100%
+        height: 60vw
+        margin: 1vw auto 2vw
+        max-height: 75vh
+        position: relative
+        //display: none
+        //transition: 1.0s
+        //overflow: hidden
+
+        .left-scroll
+          width: 20%
+          height: 100%
+          //background: rgba(0,0,0,0.7)
+          background: linear-gradient(to right, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0) 100%)
+          position: absolute
+          z-index: 3
+          transition: 0.5s
+          cursor: pointer
+
+          svg
+            transform: rotate(90deg)
+            height: 20vw
+            margin: 10vw auto
+            transition: 0.5s
+
+          &:hover
+            background: linear-gradient(to right, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.1) 90%, rgba(0,0,0,0) 100%)
+
+            svg
+              transform: rotate(90deg) scale(1.3)
+              fill: rgba(255,255,255,0.9)
+
+        .right-scroll
+          width: 20%
+          height: 100%
+          //background: rgba(0,0,0,0.7)
+          background: linear-gradient(to left, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0) 100%)
+          position: absolute
+          right: 0
+          z-index: 3
+          transition: 0.5s
+          cursor: pointer
+
+          svg
+            transform: rotate(-90deg)
+            height: 20vw
+            margin: 10vw auto
+            transition: 0.5s
+
+          &:hover
+            background: linear-gradient(to left, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.1) 90%, rgba(0,0,0,0) 100%)
+
+            svg
+              transform: rotate(-90deg) scale(1.3)
+              fill: rgba(255,255,255,0.9)
+
+        .small-slide
+          width: 18%
+          height: 80%
+          //background: pink
+          position: absolute
+          top: 10%
+          display: flex
+          transition: 2s
+          opacity: 1.0
+          z-index: 1
+          //filter: blur(2px)
+
+          img
+            max-width: 100%
+            max-height: 100%
+            margin: auto
+
+        .off-left
+          left: -20%
+          opacity: 0.0
+          z-index: -1
+
+        .off-right
+          left: 100%
+          right: -20%
+          opacity: 0.0
+          z-index: -1
+
+        .small-left
+          left: 0%
+          right: 82%
+
+        .small-right
+          right: 0%
+          left: 82%
+
+        .main-slide
+          width: 70%
+          height: 100%
+          //background: rgba(0,200,0,0.6)
+          position: absolute
+          top: 0%
+          left: 15%
+          right: 15%
+          z-index: 2
+          display: flex
+          transition: 2s
+          //box-shadow: 6vw 0 10vw -4px rgba(0,0,0,0.6), -6vw 0 10vw -4px rgba(0,0,0,0.6)
+
+          img
+            max-width: 100%
+            max-height: 90%
+            margin: auto

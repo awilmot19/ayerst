@@ -1,0 +1,131 @@
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+
+<script>
+  $(document).ready(function () {
+
+    var divFading = false;
+    setTimeout(function() {
+      $('.fader').addClass('faded');
+      divFaded = true;
+    }, 1400);
+    $('.jumbotron').css("opacity", "1.0");
+
+    setTimeout(function() {
+      $('.fader').css('display', 'none');
+    }, 3000);
+
+    var pageNum = $('body').data("options") + 1;
+    $('nav li:nth-child(' + pageNum + ') h4').addClass('active');
+
+    $window = $(window);
+    var fixedNav = false;
+    $window.scroll(function() {
+      //console.log($window.scrollTop());
+      if (!fixedNav) {
+        if ($window.scrollTop() >= $('header').height()) {
+          $('nav').addClass('fixed-nav');
+          fixedNav = true;
+          $('.fader').css('display', 'none');
+        }
+      }
+      else {
+        if ($window.scrollTop() < $('header').height()) {
+          $('nav').removeClass('fixed-nav');
+          fixedNav = false;
+        }
+      }
+    });
+
+    $window.trigger('scroll');
+
+    $('.learn-more').click(function() {
+      var diff;
+      if ($('nav').hasClass('fixed-nav')) {
+        diff = $('.main').offset().top - $('nav').height();
+      }
+      else diff = $('.main').offset().top - ($('nav').height() * 2);
+      //console.log(diff);
+      var durrrr = diff/1.5;
+      $('body').animate({
+        scrollTop: diff
+      }, durrrr);
+    });
+
+    $window.resize(function() {
+      if (gridShowing) {
+        var gridHeight = $('.grid').height() * 1.025;
+        $('.blind-showcase').css('height', gridHeight);
+      }
+      else {
+        var slidesHeight = $('.slides').height() * 1.023;
+        $('.blind-showcase').css('height', slidesHeight);
+      }
+    })
+
+    $('.slides').hide();
+
+    var gridShowing = true;
+
+    $('.slide-view').click(function() {
+      gridShowing = false;
+      $('.slide-view').addClass('active');
+      $('.grid-view').removeClass('active');
+      $('.grid').fadeOut(2000);
+      $('.slides').fadeIn(2000);
+      var slidesHeight = $('.slides').height() * 1.023;
+      $('.blind-showcase').css('height', slidesHeight);
+      var diff;
+      diff = $('.showcase-area').offset().top - $('nav').height();
+      var durrrr = diff/1.5;
+      $('body').animate({
+        scrollTop: diff
+      }, durrrr);
+    });
+
+    $('.grid-view').click(function() {
+      gridShowing = true;
+      $('.grid-view').addClass('active');
+      $('.slide-view').removeClass('active');
+      $('.slides').fadeOut(2000);
+      $('.grid').fadeIn(2000);
+      var gridHeight = $('.grid').height() * 1.025;
+      $('.blind-showcase').css('height', gridHeight);
+      var diff;
+      diff = $('.showcase-area').offset().top - $('nav').height();
+      var durrrr = diff/1.5;
+      $('body').animate({
+        scrollTop: diff
+      }, durrrr);
+    });
+
+    var currSlide = 1;
+    var currProdPage = $('body').attr('id');
+
+    $('.left-scroll').click(function() {
+      currSlide = (((currSlide-2) % 9)+9)%9 + 1;
+      var newLeft = (((currSlide-3) % 9)+9)%9 + 1;
+      $('.off-right').remove();
+      $('.small-right').addClass('off-right').removeClass('small-right');
+      $('.main-slide').addClass('small-slide small-right').removeClass('main-slide');
+      $('.small-left').addClass('main-slide').removeClass('small-slide small-left');
+      $('.off-left').addClass('small-left').removeClass('off-left');
+      $('.small-left').before("<div class='small-slide off-left'><img src='/images/show-" + currProdPage + "-" + newLeft + ".jpg'></div>");
+    });
+
+    $('.right-scroll').click(function() {
+      currSlide = (currSlide % 9) + 1;
+      var newRight = ((currSlide % 9) + 1) % 9 + 1;
+      $('.off-left').remove();
+      $('.small-left').addClass('off-left').removeClass('small-left');
+      $('.main-slide').addClass('small-slide small-left').removeClass('main-slide');
+      $('.small-right').addClass('main-slide').removeClass('small-slide small-right');
+      $('.off-right').addClass('small-right').removeClass('off-right');
+      $('.small-right').after("<div class='small-slide off-right'><img src='/images/show-" + currProdPage + "-" + newRight + ".jpg'></div>");
+    });
+
+
+
+  });
+</script>
