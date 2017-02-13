@@ -110,7 +110,7 @@
       $('.main-slide').addClass('small-slide small-right').removeClass('main-slide');
       $('.small-left').addClass('main-slide').removeClass('small-slide small-left');
       $('.off-left').addClass('small-left').removeClass('off-left');
-      $('.small-left').before("<div class='small-slide off-left'><img src='images/show-" + currProdPage + "-" + newLeft + ".jpg'></div>");
+      $('.small-left').before("<div class='small-slide off-left'><img src='{{ site.baseurl }}/images/show-" + currProdPage + "-" + newLeft + ".jpg'></div>");
     });
 
     $('.right-scroll').click(function() {
@@ -121,7 +121,7 @@
       $('.main-slide').addClass('small-slide small-left').removeClass('main-slide');
       $('.small-right').addClass('main-slide').removeClass('small-slide small-right');
       $('.off-right').addClass('small-right').removeClass('off-right');
-      $('.small-right').after("<div class='small-slide off-right'><img src='images/show-" + currProdPage + "-" + newRight + ".jpg'></div>");
+      $('.small-right').after("<div class='small-slide off-right'><img src='{{ site.baseurl }}/images/show-" + currProdPage + "-" + newRight + ".jpg'></div>");
     });
 
 
