@@ -1245,4 +1245,108 @@ section {
           max-height: 90%;
           margin: auto; }
 
+#contact .main {
+  background: url("../images/grey-background.jpg"); }
+  #contact .main .container {
+    width: 100%;
+    max-width: 1400px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around; }
+    #contact .main .container .image {
+      width: 35%;
+      height: 70vmin;
+      background-image: url("../images/contact-main.jpg");
+      background-size: cover;
+      background-position: left center;
+      background-repeat: no-repeat; }
+    #contact .main .container .contact-info {
+      width: 65%;
+      max-width: 850px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      margin: 3vmin 0; }
+      #contact .main .container .contact-info * {
+        margin: 0;
+        padding: 0; }
+      #contact .main .container .contact-info p {
+        width: 86%;
+        color: #39393b; }
+      #contact .main .container .contact-info .form-thankyou {
+        width: 82%;
+        height: 35vmin;
+        position: relative; }
+        #contact .main .container .contact-info .form-thankyou form {
+          width: 100%;
+          text-align: left;
+          display: flex;
+          flex-wrap: wrap;
+          font-size: 3vmin;
+          justify-content: space-between;
+          margin: 3vmin 0;
+          position: absolute; }
+          #contact .main .container .contact-info .form-thankyou form input[type=text] {
+            font-size: 3vmin;
+            padding-left: 0.6vmin;
+            color: #39393b; }
+          #contact .main .container .contact-info .form-thankyou form .input-name {
+            width: 47%;
+            color: #39393b; }
+            #contact .main .container .contact-info .form-thankyou form .input-name input {
+              width: 100%; }
+          #contact .main .container .contact-info .form-thankyou form .input-email {
+            width: 46%;
+            color: #39393b; }
+            #contact .main .container .contact-info .form-thankyou form .input-email input {
+              width: 100%; }
+          #contact .main .container .contact-info .form-thankyou form .input-message {
+            width: 100%;
+            color: #39393b; }
+            #contact .main .container .contact-info .form-thankyou form .input-message textarea {
+              width: 100%;
+              height: 10vmin;
+              font-size: 3vmin;
+              padding-left: 0.6vmin;
+              resize: none;
+              color: #39393b; }
+          #contact .main .container .contact-info .form-thankyou form .input-submit {
+            width: 100%;
+            text-align: center; }
+            #contact .main .container .contact-info .form-thankyou form .input-submit input[type=submit] {
+              font-size: 2vmin;
+              height: 5vmin;
+              width: 15vmin;
+              background: #c39450;
+              border: none;
+              border-radius: 0.4vmin;
+              cursor: pointer;
+              color: #39393b;
+              transition: 0.5s; }
+              #contact .main .container .contact-info .form-thankyou form .input-submit input[type=submit]:hover {
+                background: #a77a39;
+                color: #fff; }
+        #contact .main .container .contact-info .form-thankyou #thank-you {
+          width: 100%;
+          height: 100%;
+          text-align: center; }
+          #contact .main .container .contact-info .form-thankyou #thank-you h1 {
+            font-size: 8vmin;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            display: none; }
+    #contact .main .container .location {
+      width: 100%;
+      display: flex; }
+      #contact .main .container .location p {
+        margin: auto;
+        color: #39393b; }
+        #contact .main .container .location p span {
+          color: #c39450; }
+
 /*# sourceMappingURL=ayerst.css.map */
