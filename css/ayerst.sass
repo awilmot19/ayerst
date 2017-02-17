@@ -222,6 +222,7 @@ body
     background-image: url("../images/jumbo-white-2-blur.jpg")
 
   .main
+    overflow: hidden
     width: 100%
     //margin: 0 auto
     display: flex
@@ -586,7 +587,7 @@ section
       left: 50%
       transform: translateX(-50%)
       margin: 24vmin 0 0 0
-      border-radius: 5vw
+      border-radius: 10vmin
       border: 1px solid #39393b
       box-sizing: border-box
 
@@ -1758,3 +1759,21 @@ section
 
           span
             color: $beige
+
+.animation-element
+  opacity: 0
+  transition: 1s
+
+.animation-element.slide-up
+  transform: translateY(12vh)
+
+.animation-element.slide-up.in-view
+  opacity: 1
+  transform: translateY(0vh)
+
+.animation-element.expand
+  transform: scale(0.1)
+
+.animation-element.expand.in-view
+  opacity: 1
+  transform: scale(1)

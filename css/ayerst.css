@@ -173,6 +173,7 @@ body {
   body .blurred {
     background-image: url("../images/jumbo-white-2-blur.jpg"); }
   body .main {
+    overflow: hidden;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -465,7 +466,7 @@ section {
     left: 50%;
     transform: translateX(-50%);
     margin: 24vmin 0 0 0;
-    border-radius: 5vw;
+    border-radius: 10vmin;
     border: 1px solid #39393b;
     box-sizing: border-box; }
     #about .about-home-office .or-circle h2 {
@@ -1348,5 +1349,23 @@ section {
         color: #39393b; }
         #contact .main .container .location p span {
           color: #c39450; }
+
+.animation-element {
+  opacity: 0;
+  transition: 1s; }
+
+.animation-element.slide-up {
+  transform: translateY(12vh); }
+
+.animation-element.slide-up.in-view {
+  opacity: 1;
+  transform: translateY(0vh); }
+
+.animation-element.expand {
+  transform: scale(0.1); }
+
+.animation-element.expand.in-view {
+  opacity: 1;
+  transform: scale(1); }
 
 /*# sourceMappingURL=ayerst.css.map */
